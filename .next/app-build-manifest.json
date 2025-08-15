@@ -14,6 +14,7 @@
     "/home/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/home/layout.css",
       "static/chunks/app/home/layout.js"
     ],
     "/home/page": [
