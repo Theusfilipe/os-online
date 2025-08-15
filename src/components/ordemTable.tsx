@@ -43,14 +43,14 @@ export default function ServiceTable({ data }: Props) {
   return (
     
     <div className="table-responsive" >
-            <table className="table table-bordered table-hover">
-                <thead className="table-dark">
+            <table className="table table-bordered table-hover" style={{ whiteSpace: "nowrap" }}>
+                <thead className="table-dark" >
                     <tr>
                     <th style={{left: 0, background: "#343a40", zIndex: 2 }}>ID</th>
                     <th>CLIENTE</th>
                     <th>Nº OS</th>
                     <th>SS</th>
-                    <th>DATA DE CRIAÇÃO DA SS</th>
+                    <th >DATA DE CRIAÇÃO DA SS</th>
                     <th>OS CLIENTE</th>
                     <th>DESCRIÇÃO DA OS</th>
                     <th>INÍCIO DO SERVIÇO</th>

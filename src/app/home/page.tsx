@@ -65,7 +65,41 @@ const data = [
       statusAtraso: "Atrasado",
       contagemAtraso: "1",
       contagemNoPrazo: "0",
-    }]
+    },
+    {
+      id: 3,
+      cliente: "Cliente C",
+      numeroOS: "OS-003",
+      ss: "SS-003",
+      dataCriacaoSS: "02/08/2025",
+      osCliente: "OS Cliente C",
+      descricaoOS: "Descrição do serviço B",
+      inicioServico: "03/08/2025",
+      terminoServico: "04/08/2025",
+      duracao: "1 dia",
+      numeroCAFT: "2345",
+      vencimentoCAFT: "11/08/2025",
+      numeroPOM: "6789",
+      tipoServico: "Instalação",
+      local: "Base Y",
+      cidade: "Rio de Janeiro",
+      supervisor: "Supervisor 2",
+      numeroRefRelatorio: "Ref-002",
+      relatorioIniciado: "02/08/2025",
+      dataEmissaoRelatorio: "05/08/2025",
+      dataEnvioRelatorio: "06/08/2025",
+      emissaoXEnvio: "1 dia",
+      revisao: "Pendente",
+      dataRevisao: "-",
+      dataRelatorioAssinado: "-",
+      elaboradoPor: "João",
+      status: "Em andamento",
+      statusAtraso: "Atrasado",
+      contagemAtraso: "1",
+      contagemNoPrazo: "0",
+    },
+
+]
 
 export default function Home() {
   return (  
