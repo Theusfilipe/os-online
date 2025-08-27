@@ -137,17 +137,17 @@ const data = [
 
 ]
 
-const [selectedOrdem, setSelectedOrdem] = useState<OrdemServicoData | null>(null);
+//const [selectedOrdem, setSelectedOrdem] = useState<OrdemServicoData | null>(null);
 
 const onRowClick = (item: OrdemServicoData) => {
-  setSelectedOrdem(item);
+  //setSelectedOrdem(item);
 }
 
 export default function Home() {
   return (  
     <>
       <OrdemTable data={data} onRowClick={onRowClick} />
-      <EditarOrdemServicoModal ordem={selectedOrdem}/>  
+      <EditarOrdemServicoModal ordem={null}/>
     </>
   );
 }
