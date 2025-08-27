@@ -1,5 +1,41 @@
+'use client';
 
+import EditarOrdemServicoModal from "@/components/editarItemModal";
 import OrdemTable from "@/components/ordemTable";
+import { useState } from "react";
+
+type OrdemServicoData = {
+  id: number;
+  cliente: string;
+  numeroOS: string;
+  ss: string;
+  dataCriacaoSS: string;
+  osCliente: string;
+  descricaoOS: string;
+  inicioServico: string;
+  terminoServico: string;
+  duracao: string;
+  numeroCAFT: string;
+  vencimentoCAFT: string;
+  numeroPOM: string;
+  tipoServico: string;
+  local: string;
+  cidade: string;
+  supervisor: string;
+  numeroRefRelatorio: string;
+  relatorioIniciado: string;
+  dataEmissaoRelatorio: string;
+  dataEnvioRelatorio: string;
+  emissaoXEnvio: string;
+  revisao: string;
+  dataRevisao: string;
+  dataRelatorioAssinado: string;
+  elaboradoPor: string;
+  status: string;
+  statusAtraso: string;
+  contagemAtraso: string;
+  contagemNoPrazo: string;
+};
 
 const data = [
     {
@@ -101,10 +137,17 @@ const data = [
 
 ]
 
+const [selectedOrdem, setSelectedOrdem] = useState<OrdemServicoData | null>(null);
+
+const onRowClick = (item: OrdemServicoData) => {
+  setSelectedOrdem(item);
+}
+
 export default function Home() {
   return (  
     <>
-        <OrdemTable data={data} />
+      <OrdemTable data={data} onRowClick={onRowClick} />
+      <EditarOrdemServicoModal ordem={selectedOrdem}/>  
     </>
   );
 }

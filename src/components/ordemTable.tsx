@@ -37,9 +37,10 @@ type OrdemServicoData = {
 
 interface Props {
   data: OrdemServicoData[];
+  onRowClick: (item: OrdemServicoData) => void;
 }
 
-export default function ServiceTable({ data }: Props) {
+export default function ServiceTable({ data, onRowClick }: Props) {
   return (
     
     <div className="table-responsive" >
@@ -80,7 +81,7 @@ export default function ServiceTable({ data }: Props) {
                 </thead>
                 <tbody>
                 {data.map((row) => (
-                    <tr key={row.id}>
+                    <tr key={row.id} data-bs-toggle="modal" data-bs-target="#editarOrdemModal" onClick={() => onRowClick(row)}>
                         <td style={{ position: "sticky", left: 0, background: "#fff", zIndex: 1 }}>{row.id}</td>
                         <td>{row.cliente}</td>
                         <td>{row.numeroOS}</td>
